@@ -43,10 +43,28 @@
                     <DataGridTextColumn Header="Статус" Binding="{Binding Status}"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <Button x:Name="BtnAdd" Content="Добавить" HorizontalAlignment="Left" Margin="10,19,0,0" VerticalAlignment="Top" Height="32" Width="93" Click="BtnAdd_Click" Grid.Row="1"/>
-            <Button x:Name="BtnTrack" Content="Отследить" HorizontalAlignment="Left" Margin="108,19,0,0" VerticalAlignment="Top" Height="32" Width="93" Click="BtnTrack_Click" Grid.Row="1"/>
+            <Button x:Name="BtnAdd" Content="Добавить" HorizontalAlignment="Left" Margin="10,19,0,0" VerticalAlignment="Top" Height="32" Width="93" Click="BtnAdd_Click" Grid.Row="1">
+                <Button.ToolTip>
+                    <ToolTip>
+                        Открытие окна с добавлением нового сотрудника
+                    </ToolTip>
+                </Button.ToolTip>
+            </Button>
+            <Button x:Name="BtnTrack" Content="Отследить" HorizontalAlignment="Left" Margin="108,19,0,0" VerticalAlignment="Top" Height="32" Width="93" Click="BtnTrack_Click" Grid.Row="1">
+                <Button.ToolTip>
+                    <ToolTip>
+                        Открыть окно отслеживания входа/выхода сотрудников
+                    </ToolTip>
+                </Button.ToolTip>
+            </Button>
             <Button x:Name="BtnUpd" Content="Обновить" HorizontalAlignment="Left" Margin="206,19,0,0" VerticalAlignment="Top" Height="32" Width="93" Click="BtnUpd_Click" Grid.Row="1"/>
-            <Button x:Name="BtnDel" Content="Удалить" HorizontalAlignment="Left" Margin="304,19,0,0" VerticalAlignment="Top" Height="32" Width="93" Click="BtnDel_Click" Grid.Row="1" />
+            <Button x:Name="BtnDel" Content="Удалить" HorizontalAlignment="Left" Margin="304,19,0,0" VerticalAlignment="Top" Height="32" Width="93" Click="BtnDel_Click" Grid.Row="1">
+                <Button.ToolTip>
+                    <ToolTip>
+                        Удалить выбранного сотрудника
+                    </ToolTip>
+                </Button.ToolTip>
+            </Button>
         </Grid>
     </Grid>
 </mah:MetroWindow>

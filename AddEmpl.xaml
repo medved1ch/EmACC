@@ -38,9 +38,19 @@
         <Button x:Name="BtnAdd" Content="Добавить" HorizontalAlignment="Left" Height="38" Margin="321,283,0,0" VerticalAlignment="Top" Width="102" Click="BtnAdd_Click"/>
         <Button x:Name="BtnAddPost" HorizontalAlignment="Left" Margin="428,197,0,0" VerticalAlignment="Top" Width="26" Height="26" Click="BtnAddPost_Click">
             <Image Source="img/add.png"/>
+            <Button.ToolTip>
+                <ToolTip>
+                    Добавить новую должность
+                </ToolTip>
+            </Button.ToolTip>
         </Button>
         <Button x:Name="BtnDelPost" HorizontalAlignment="Left" Margin="459,197,0,0" VerticalAlignment="Top" Width="26" Height="26" Click="BtnDelPost_Click">
             <Image Source="img/minus.png"/>
+            <Button.ToolTip>
+                <ToolTip>
+                    Удалить выбранную должность
+                </ToolTip>
+            </Button.ToolTip>
         </Button>
     </Grid>
 </mah:MetroWindow>
