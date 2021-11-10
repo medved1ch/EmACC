@@ -1,27 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using MahApps.Metro.Controls;
 using System.Data.SQLite;
 using uchet.Connection;
 using System.Data;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace uchet
 {
     /// <summary>
     /// Логика взаимодействия для AddEmpl.xaml
     /// </summary>
-    public partial class AddEmpl : MetroWindow
+    public partial class AddEmpl : Window
     {
         DataTable dt1 = new DataTable("Position");
         DataTable dt2 = new DataTable("Stat");
@@ -33,11 +24,11 @@ namespace uchet
             CbPostFill();
         }
 
-        private void BtnBack_Click(object sender, RoutedEventArgs e)
+/*        private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
 
-        }
+        }*/
         public void CbStatusFill()
         {
             dt2.Clear();

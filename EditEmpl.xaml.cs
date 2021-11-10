@@ -5,7 +5,6 @@ using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using MahApps.Metro.Controls;
 using uchet.Connection;
 
 namespace uchet
@@ -13,7 +12,7 @@ namespace uchet
     /// <summary>
     /// Логика взаимодействия для EditEmpl.xaml
     /// </summary>
-    public partial class EditEmpl : MetroWindow
+    public partial class EditEmpl : Window
     {
         DataTable dt1 = new DataTable("Position");
         DataTable dt2 = new DataTable("Stat");
@@ -33,11 +32,11 @@ namespace uchet
             id = drv["id"].ToString();
             
         }
-        private void BtnBack_Click(object sender, RoutedEventArgs e)
+/*        private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
 
-        }
+        }*/
         public void CbStatusFill()
         {
             dt2.Clear();

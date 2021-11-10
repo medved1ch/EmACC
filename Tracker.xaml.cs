@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
-using MahApps.Metro.Controls;
 using System.Data;
 using System.Data.SQLite;
 using uchet.Connection;
@@ -12,7 +11,7 @@ namespace uchet
     /// <summary>
     /// Логика взаимодействия для Tracker.xaml
     /// </summary>
-    public partial class Tracker : MetroWindow
+    public partial class Tracker : Window
     {
         DataTable dt1 = new DataTable("Employee");
        
@@ -23,10 +22,10 @@ namespace uchet
             DisplayData();
         }
 
-        private void BtnBack_Click(object sender, RoutedEventArgs e)
+        /*private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
-        }
+        }*/
         public void DisplayData()
         {
             using (SQLiteConnection connection = new SQLiteConnection(DBConnection.myConn))
@@ -141,7 +140,7 @@ namespace uchet
             DisplayData();
         }
 
-        private void BtnExp_Click(object sender, RoutedEventArgs e)
+        /*private void BtnExp_Click(object sender, RoutedEventArgs e)
         {
             Excel.Application excel = new Excel.Application();
             excel.Visible = true;
@@ -172,6 +171,6 @@ namespace uchet
                     myRange.Value2 = b.Text;
                 }
             }
-        }
+        }*/
     }
     }

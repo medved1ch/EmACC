@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Input;
-using MahApps.Metro.Controls;
 using System.Data.SQLite;
 using uchet.Connection;
 using System.Data;
@@ -14,7 +12,7 @@ namespace uchet
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : MetroWindow
+    public partial class MainWindow : Window
 
     {
         public MainWindow()
@@ -102,7 +100,7 @@ namespace uchet
             DisplayData();
         }
 
-        private void BtnExp_Click(object sender, RoutedEventArgs e)
+        /*private void BtnExp_Click(object sender, RoutedEventArgs e)
         {
             Excel.Application excel = new Excel.Application();
             excel.Visible = true;
@@ -116,7 +114,7 @@ namespace uchet
             myRange1.Font.Name = "Times New Roman";
             myRange1.Font.Bold = true;
             myRange1.Cells.Font.Size = 16;
-            sheet1.Range["A1"].Value = "Отчёт был создан в программе EMACC "+ DateTime.Now.Date.ToString("dd/MM/yyyy");
+            sheet1.Range["A1"].Value = "Отчёт был создан в программе EMACC " + DateTime.Now.Date.ToString("dd/MM/yyyy");
             for (int j = 0; j < DGAllEmp.Columns.Count; j++)
             {
                 Excel.Range myRange = (Excel.Range)sheet1.Cells[2, j + 1];
@@ -133,7 +131,7 @@ namespace uchet
                     myRange.Value2 = b.Text;
                 }
             }
-        }
+        }*/
 
         private void DGAllEmp_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {

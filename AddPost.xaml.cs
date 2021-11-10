@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows;
-using MahApps.Metro.Controls;
 using System.Data.SQLite;
 using uchet.Connection;
 
@@ -9,7 +8,7 @@ namespace uchet
     /// <summary>
     /// Логика взаимодействия для AddPost.xaml
     /// </summary>
-    public partial class AddPost : MetroWindow
+    public partial class AddPost : Window
     {
         public AddPost()
         {
