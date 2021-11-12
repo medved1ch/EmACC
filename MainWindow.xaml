@@ -8,15 +8,15 @@
         Title="EMACC: СОТРУДНИКИ" WindowState="Normal" WindowStartupLocation="CenterScreen" Height="450" Width="800" MinHeight="450" MinWidth="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="800*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Grid Grid.Column="0" Grid.ColumnSpan="2">
+        <Grid Grid.Column="0">
             <Grid.RowDefinitions >
                 <RowDefinition/>
                 <RowDefinition Height="60"/>
             </Grid.RowDefinitions>
-            <DataGrid Grid.Column="0" RowHeight="30" Grid.RowSpan="1" x:Name="DGAllEmp" HorizontalAlignment="Center" IsReadOnly="True"  ColumnWidth="*" VerticalAlignment="Top"  AutoGenerateColumns="False" MinColumnWidth="20" GridLinesVisibility="Vertical" MouseDoubleClick="DGAllEmp_MouseDoubleClick">
+            <DataGrid Grid.Column="0" RowHeight="30"  Grid.Row="0" Grid.RowSpan="1" x:Name="DGAllEmp" HorizontalAlignment="Center" IsReadOnly="True"  ColumnWidth="*" VerticalAlignment="Top"  AutoGenerateColumns="False" MinColumnWidth="20" GridLinesVisibility="All" MouseDoubleClick="DGAllEmp_MouseDoubleClick">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Фамилия" Binding="{Binding SN}"/>
                     <DataGridTextColumn Header="Имя" Binding="{Binding FN}"/>
@@ -27,22 +27,22 @@
                     <DataGridTextColumn Header="Статус" Binding="{Binding Status}"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <Button x:Name="BtnAdd" Content="Добавить" HorizontalAlignment="Left" Margin="10,19,0,0" VerticalAlignment="Top" Height="32" Width="93" Click="BtnAdd_Click" Grid.Row="1">
+            <Button x:Name="BtnAdd" Content="Добавить" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Height="25" Width="85" Click="BtnAdd_Click" Grid.Row="1">
                 <Button.ToolTip>
                     <ToolTip>
                         Открытие окна с добавлением нового сотрудника
                     </ToolTip>
                 </Button.ToolTip>
             </Button>
-            <Button x:Name="BtnTrack" Content="Отследить" HorizontalAlignment="Left" Margin="108,19,0,0" VerticalAlignment="Top" Height="32" Width="93" Click="BtnTrack_Click" Grid.Row="1">
+            <Button x:Name="BtnTrack" Content="Отследить" HorizontalAlignment="Left" Margin="105,21,0,0" VerticalAlignment="Top" Height="25" Width="85" Click="BtnTrack_Click" Grid.Row="1">
                 <Button.ToolTip>
                     <ToolTip>
                         Открыть окно отслеживания входа/выхода сотрудников
                     </ToolTip>
                 </Button.ToolTip>
             </Button>
-            <Button x:Name="BtnUpd" Content="Обновить" HorizontalAlignment="Left" Margin="206,19,0,0" VerticalAlignment="Top" Height="32" Width="93" Click="BtnUpd_Click" Grid.Row="1"/>
-            <Button x:Name="BtnDel" Content="Удалить" HorizontalAlignment="Left" Margin="304,19,0,0" VerticalAlignment="Top" Height="32" Width="93" Click="BtnDel_Click" Grid.Row="1">
+            <Button x:Name="BtnUpd" Content="Обновить" HorizontalAlignment="Left" Margin="200,21,0,0" VerticalAlignment="Top" Height="25" Width="85" Click="BtnUpd_Click" Grid.Row="1"/>
+            <Button x:Name="BtnDel" Content="Удалить" HorizontalAlignment="Left" Margin="295,21,0,0" VerticalAlignment="Top" Height="25" Width="85" Click="BtnDel_Click" Grid.Row="1">
                 <Button.ToolTip>
                     <ToolTip>
                         Удалить выбранного сотрудника

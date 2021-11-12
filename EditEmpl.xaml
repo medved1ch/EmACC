@@ -8,20 +8,20 @@
         Title="EMACC: Редактирование" WindowState="Normal" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterOwner" MinHeight="405" MinWidth="502" MaxHeight="405" MaxWidth="502" >
    
     <Grid>
-        <Label Content="Фамилия" HorizontalAlignment="Left" Margin="110,47,0,0" VerticalAlignment="Top" Width="66" HorizontalContentAlignment="Right"/>
-        <Label Content="Имя" HorizontalAlignment="Left" Margin="133,77,0,0" VerticalAlignment="Top" Width="43"/>
-        <Label Content="Отчество" HorizontalAlignment="Left" Margin="110,107,0,0" VerticalAlignment="Top" Width="66" HorizontalContentAlignment="Right"/>
-        <Label Content="Дата рождения" HorizontalAlignment="Left" Margin="79,137,0,0" VerticalAlignment="Top" Width="97" HorizontalContentAlignment="Right"/>
-        <Label Content="Телефон" HorizontalAlignment="Left" Margin="110,167,0,0" VerticalAlignment="Top" Width="66" HorizontalContentAlignment="Right"/>
-        <Label Content="Должность" HorizontalAlignment="Left" Margin="100,197,0,0" VerticalAlignment="Top" Width="76" HorizontalContentAlignment="Right"/>
-        <Label Content="Статус" HorizontalAlignment="Left" Margin="100,227,0,0" VerticalAlignment="Top" Width="76" HorizontalContentAlignment="Right" />
-        <TextBox x:Name="TbSN" HorizontalAlignment="Left" Height="25" Margin="204,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="219" VerticalContentAlignment="Center" />
-        <TextBox x:Name="TbFN" HorizontalAlignment="Left" Height="25" Margin="204,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="219" VerticalContentAlignment="Center" />
-        <TextBox x:Name="TbMN" HorizontalAlignment="Left" Height="25" Margin="204,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="219" VerticalContentAlignment="Center" />
-        <DatePicker x:Name="DpB" HorizontalAlignment="Left" Margin="204,137,0,0" VerticalAlignment="Top" Width="219" Height="25"/>
-        <ComboBox x:Name="CbPost" HorizontalAlignment="Left" Margin="204,197,0,0" VerticalAlignment="Top" Width="219" Height="25"/>
-        <ComboBox x:Name="CbStat" HorizontalAlignment="Left" Margin="204,227,0,0" VerticalAlignment="Top" Width="219" Height="25"/>
-        <TextBox x:Name="TbPhone" HorizontalAlignment="Left" Margin="204,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="219" Height="25" VerticalContentAlignment="Center" TextChanged="TbPhone_TextChanged" PreviewTextInput="TbPhone_PreviewTextInput" GotFocus="TbPhone_GotFocus"/>
-        <Button x:Name="BtnEdit" Content="Изменить" HorizontalAlignment="Left" Height="38" Margin="321,283,0,0" VerticalAlignment="Top" Width="102" Click="BtnEdit_Click"/>
+        <Label Content="Фамилия" HorizontalAlignment="Left" Margin="100,47,0,0" VerticalAlignment="Top" Width="75" HorizontalContentAlignment="Right"/>
+        <Label Content="Имя" HorizontalAlignment="Left" Margin="100,77,0,0" VerticalAlignment="Top" Width="75" HorizontalContentAlignment="Right"/>
+        <Label Content="Отчество" HorizontalAlignment="Left" Margin="110,107,0,0" VerticalAlignment="Top" Width="65" HorizontalContentAlignment="Right"/>
+        <Label Content="Дата рождения" HorizontalAlignment="Left" Margin="81,137,0,0" VerticalAlignment="Top" Width="94" HorizontalContentAlignment="Right"/>
+        <Label Content="Телефон" HorizontalAlignment="Left" Margin="109,167,0,0" VerticalAlignment="Top" Width="66" HorizontalContentAlignment="Right"/>
+        <Label Content="Должность" HorizontalAlignment="Left" Margin="99,197,0,0" VerticalAlignment="Top" Width="76" HorizontalContentAlignment="Right"/>
+        <Label Content="Статус" HorizontalAlignment="Left" Margin="99,227,0,0" VerticalAlignment="Top" Width="76" HorizontalContentAlignment="Right" />
+        <TextBox x:Name="TbSN" HorizontalAlignment="Left" Height="25"  Margin="185,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" VerticalContentAlignment="Center" />
+        <TextBox x:Name="TbFN" HorizontalAlignment="Left" Height="25" Margin="185,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" VerticalContentAlignment="Center" />
+        <TextBox x:Name="TbMN" HorizontalAlignment="Left" Height="25" Margin="185,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" VerticalContentAlignment="Center" />
+        <DatePicker x:Name="DpB" HorizontalAlignment="Left" Margin="185,137,0,0" VerticalAlignment="Top" Width="220" Height="25"/>
+        <ComboBox x:Name="CbPost" HorizontalAlignment="Left" Margin="185,197,0,0" VerticalAlignment="Top" Width="220" Height="25"/>
+        <ComboBox x:Name="CbStat" HorizontalAlignment="Left" Margin="185,227,0,0" VerticalAlignment="Top" Width="220" Height="25"/>
+        <TextBox x:Name="TbPhone" Text="+7(___)___-__-__" HorizontalAlignment="Left" Margin="185,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" Height="25" VerticalContentAlignment="Center" TextChanged="TbPhone_TextChanged" PreviewTextInput="TbPhone_PreviewTextInput" GotFocus="TbPhone_GotFocus"/>
+        <Button x:Name="BtnEdit" Content="Изменить" HorizontalAlignment="Left" Height="25" Margin="320,275,0,0" VerticalAlignment="Top" Width="85" Click="BtnEdit_Click"/>
     </Grid>
 </Window>

@@ -109,6 +109,8 @@ namespace uchet
                             TbPhone.Clear();
                             DpB.Text = DateTime.Now.Date.ToString("dd/MM/yyyy");
                             TbPhone.Clear();
+                            CbStat.SelectedIndex = -1;
+                            CbPost.SelectedIndex = -1;
                         }
                         else
                         {
@@ -143,26 +145,43 @@ namespace uchet
             {
                 if (CbPost.SelectedIndex == -1)
                 {
-                    MessageBox.Show("Выберите должность, которую хотите удалить", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Выберите какое название нужно удалить", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
                 else
                 {
                     int IdPost;
-                    bool NamePost = int.TryParse(CbPost.SelectedValue.ToString(), out IdPost);
+                    bool idPos = int.TryParse(CbPost.SelectedValue.ToString(), out IdPost);
                     try
                     {
-                        string query1 = $@"DELETE FROM Position WHERE id = '{IdPost}'";
                         connection.Open();
-                        SQLiteCommand cmd1 = new SQLiteCommand(query1, connection);
-                        DataTable DT = new DataTable("Position");
-                        cmd1.ExecuteNonQuery();
+                        string query3 = $@"SELECT COUNT(*) FROM Employee WHERE idPost={IdPost}";
+                        SQLiteCommand cmd3 = new SQLiteCommand(query3, connection);
+                        int count2 = Convert.ToInt32(cmd3.ExecuteScalar());
+                        if (count2 != 0)
+                        {
+                            MessageBox.Show("Эта должность назначена", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                        }
+                        else
+                        {
+                            try
+                            {
+                                string query5 = $@"DELETE FROM Position WHERE id='{IdPost}'";
+                                SQLiteCommand cmd5 = new SQLiteCommand(query5, connection);
+                                cmd5.ExecuteNonQuery();
+                                MessageBox.Show("Должность удалена");
+                            }
+                            catch (Exception exp)
+                            {
+                                MessageBox.Show(exp.Message);
+                            }
+                        }
+
                     }
                     catch (Exception exp)
                     {
                         MessageBox.Show(exp.Message);
                     }
                 }
-
             }
         }
 

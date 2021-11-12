@@ -169,9 +169,9 @@
     <Resource Include="img\add.png" />
     <Resource Include="img\minus.png" />
     <Resource Include="logo.ico" />
-    <EmbeddedResource Include="uchet.db">
+    <Content Include="uchet.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
