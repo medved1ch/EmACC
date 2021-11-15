@@ -382,12 +382,24 @@
                     <DataGridTextColumn Header="Дата выхода" Binding="{Binding DateEx}" FontSize="16" FontWeight="Bold"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <Button x:Name="BtnEnt" Content="Вход" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Height="25" Width="85" Click="Button_Click" Grid.Row="1" FontWeight="Bold" FontSize="14"/>
-            <Button x:Name="BtnEx" Content="Выход" HorizontalAlignment="Left" Margin="105,21,0,0" VerticalAlignment="Top" Height="25" Width="85" Click="BtnEx_Click" Grid.Row="1" FontWeight="Bold" FontSize="14"/>
+            <Button x:Name="BtnEnt" Content="Вход" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Height="25" Width="85" Click="Button_Click" Grid.Row="1" FontWeight="Bold" FontSize="14">
+                <Button.ToolTip>
+                    <ToolTip>
+                        Вход сотрудника в учреждение
+                    </ToolTip>
+                </Button.ToolTip>
+            </Button>
+            <Button x:Name="BtnEx" Content="Выход" HorizontalAlignment="Left" Margin="105,21,0,0" VerticalAlignment="Top" Height="25" Width="85" Click="BtnEx_Click" Grid.Row="1" FontWeight="Bold" FontSize="14">
+                <Button.ToolTip>
+                    <ToolTip>
+                        Выход сотрудника из учреждения
+                    </ToolTip>
+                </Button.ToolTip>
+            </Button>
             <ComboBox x:Name="CbEmp" HorizontalAlignment="Left" Margin="200,21,0,0" VerticalAlignment="Top" Width="180" Height="25" Grid.Row="1" FontWeight="Bold" FontSize="14"/>
             <TextBox x:Name="TbSearch" Style="{StaticResource MyWaterMarkStyle}" Tag="Поиск по фамилии" HorizontalAlignment="Left" Height="25" Margin="391,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" VerticalContentAlignment="Center" Grid.Row="1" TextChanged="TbSearch_TextChanged" />
-            <Button x:Name="BtnExp"  HorizontalAlignment="Left" Margin="757,21,0,0" VerticalAlignment="Top" Height="25" Width="25" Grid.Row="1" FontWeight="Bold" FontSize="14" Click="BtnExp_Click">
-                <Image Source="img/excel.png" Width="18" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <Button x:Name="BtnExp"  HorizontalAlignment="Left" Margin="530,16,0,0" VerticalAlignment="Top" Height="35" Width="34" Grid.Row="1" Click="BtnExp_Click">
+                <Image Source="img/excel.png" Width="30" HorizontalAlignment="Center" VerticalAlignment="Center" />
                 <Button.ToolTip>
                     <ToolTip>
                         Экспорт в Excel

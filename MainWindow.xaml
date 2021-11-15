@@ -187,7 +187,7 @@
                         <Border x:Name="border" CornerRadius="5" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
                             <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
                         </Border>
-                        
+
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsEnabled" Value="false">
                                 <Setter Property="Opacity" TargetName="border" Value="0.56"/>
@@ -256,8 +256,8 @@
                 </Button.ToolTip>
             </Button>
             <TextBox x:Name="TbSearch" Style="{StaticResource MyWaterMarkStyle}" Tag="Поиск по фамилии" HorizontalAlignment="Left" Height="25" Margin="295,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" VerticalContentAlignment="Center" Grid.Row="1" TextChanged="TbSearch_TextChanged" />
-            <Button x:Name="BtnExp"  HorizontalAlignment="Left" Margin="757,21,0,0" VerticalAlignment="Top" Height="25" Width="25" Grid.Row="1" FontWeight="Bold" FontSize="14" Click="BtnExp_Click">
-                <Image Source="img/excel.png" Width="18" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <Button x:Name="BtnExp"  HorizontalAlignment="Left" Margin="435,16,0,0" VerticalAlignment="Top" Height="35" Width="34" Grid.Row="1" Click="BtnExp_Click">
+                <Image Source="img/excel.png" Width="30" HorizontalAlignment="Center" VerticalAlignment="Center" />
                 <Button.ToolTip>
                     <ToolTip>
                         Экспорт в Excel
