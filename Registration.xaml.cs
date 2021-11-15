@@ -103,24 +103,23 @@ namespace uchet
                         {
                             ConfirmCode = "1";
                             ConfirmCode = RndStr(2);
-                            SmtpClient Smtp = new SmtpClient("smtp.mail.ru", 25);
+                            SmtpClient Smtp = new SmtpClient("smtp.mail.ru");
                             Smtp.UseDefaultCredentials = true;
                             Smtp.EnableSsl = true;
-                            Smtp.Credentials = new NetworkCredential("usotrudnikov@bk.ru", "V3F9xDqGePV6y3w");
+                            Smtp.Credentials = new NetworkCredential("usotrudnikov@bk.ru", "fbNytLkEtd1fHVkJqCWJ");
                             MailMessage Message = new MailMessage();
-                            Message.From = new MailAddress("usotrudnikov@bk.ru");
-                            Message.To.Add(new MailAddress(TbMail.Text));
-                            Message.Subject = "EmACC";
-                            Message.Body = "Ваш код подтверждения: " + ConfirmCode + " . Для регистрации аккаунта: " + TbLogin.Text + ". На это сообщение не нужно отвечать.";
                             try
                             {
+                                Message.From = new MailAddress("usotrudnikov@bk.ru");
+                                Message.To.Add(new MailAddress(TbMail.Text));
+                                Message.Subject = "EmACC";
+                                Message.Body = "Ваш код подтверждения: " + ConfirmCode + " . Для регистрации аккаунта: " + TbLogin.Text + ". На это сообщение не нужно отвечать.";
                                 Smtp.Send(Message);
                                 MessageBox.Show("На вашу почту выслан код для проверки, введите его, чтобы завершить регистрацию", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
-
                             }
                             catch
                             {
-                                Console.WriteLine("Ошибка! Сообщение не отправлено!");
+                                MessageBox.Show("Сообщение не может отправиться");
                             }
                         }
                         catch (FormatException)
@@ -149,7 +148,7 @@ namespace uchet
 
                 {
                     connection.Open();
-                    string query = $@"INSERT INTO User ('Login','Mail','Password') VALUES (@Login,@Mail,@Pass)";
+                    string query = $@"INSERT INTO User ('Login','Mail','Password') VALUES (@Login, @Mail, @Pass)";
                     SQLiteCommand cmd = new SQLiteCommand(query, connection);
                     try
                     {
