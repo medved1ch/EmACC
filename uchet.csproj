@@ -182,6 +182,7 @@
     <Resource Include="img\add.png" />
     <Resource Include="img\minus.png" />
     <Resource Include="logo.ico" />
+    <Resource Include="img\excel.png" />
     <Content Include="uchet.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

@@ -173,7 +173,7 @@ namespace uchet
             }
         }
 
-        /*private void BtnExp_Click(object sender, RoutedEventArgs e)
+        private void BtnExp_Click(object sender, RoutedEventArgs e)
         {
             Excel.Application excel = new Excel.Application();
             excel.Visible = true;
@@ -204,6 +204,6 @@ namespace uchet
                     myRange.Value2 = b.Text;
                 }
             }
-        }*/
+        }
     }
     }
