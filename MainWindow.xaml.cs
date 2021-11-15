@@ -6,6 +6,7 @@ using System.Data.SQLite;
 using uchet.Connection;
 using System.Data;
 using Excel = Microsoft.Office.Interop.Excel;
+using System.Windows.Controls;
 
 namespace uchet
 {
@@ -143,6 +144,40 @@ namespace uchet
                 default:
                     DisplayData();
                     break;
+            }
+        }
+        private void TbSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (TbSearch.Text == "")
+            {
+                DisplayData();
+            }
+            else
+            {
+                using (SQLiteConnection connection = new SQLiteConnection(DBConnection.myConn))
+                {
+                    try
+                    {
+                        connection.Open();
+                        string query = $@"SELECT Employee.id, Employee.FirstName AS FN, Employee.SecondName AS SN, Employee.MiddleName AS MN, Employee.Dateofbirth AS DoB, 
+                                        Employee.Phone AS Phone, Position.Name AS Post, Stat.Status 
+                                        FROM Employee INNER JOIN Position on Employee.idPost = Position.id 
+                                        INNER JOIN Stat on Employee.idStatus = Stat.id WHERE SecondName LIKE @Empl
+	                                    ORDER BY SecondName";
+                        SQLiteCommand cmd = new SQLiteCommand(query, connection);
+                        cmd.Parameters.AddWithValue("@Empl", TbSearch.Text);
+                        DataTable DT = new DataTable("Employee");
+                        SQLiteDataAdapter SDA = new SQLiteDataAdapter(cmd);
+                        SDA.Fill(DT);
+                        DGAllEmp.ItemsSource = DT.DefaultView;
+
+
+                    }
+                    catch (Exception exp)
+                    {
+                        MessageBox.Show(exp.Message);
+                    }
+                }
             }
         }
     }

@@ -139,6 +139,39 @@ namespace uchet
             Exit();
             DisplayData();
         }
+        private void TbSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (TbSearch.Text == "")
+            {
+                DisplayData();
+            }
+            else
+            {
+                using (SQLiteConnection connection = new SQLiteConnection(DBConnection.myConn))
+                {
+                    try
+                    {
+                        connection.Open();
+                        string query = $@"SELECT Tracking.id, Tracking.TimeEntrance AS TimeEn, Tracking.TimeExit AS TimeEx, Tracking.DateEntrance AS DateEn, 
+                                        Tracking.DateExit AS DateEx, Employee.FirstName, Employee.SecondName FROM Tracking 
+                                        INNER JOIN Employee on Tracking.idEmployee = Employee.id WHERE Employee.SecondName=@SN
+	                                    ORDER BY SecondName";
+                        SQLiteCommand cmd = new SQLiteCommand(query, connection);
+                        cmd.Parameters.AddWithValue("@SN", TbSearch.Text);
+                        DataTable DT = new DataTable("Tracking");
+                        SQLiteDataAdapter SDA = new SQLiteDataAdapter(cmd);
+                        SDA.Fill(DT);
+                        DGTrack.ItemsSource = DT.DefaultView;
+
+
+                    }
+                    catch (Exception exp)
+                    {
+                        MessageBox.Show(exp.Message);
+                    }
+                }
+            }
+        }
 
         /*private void BtnExp_Click(object sender, RoutedEventArgs e)
         {
