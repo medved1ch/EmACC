@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2" x:Class="uchet.Registration"
         mc:Ignorable="d"
-        Title="EMACC: Регистрация" WindowState="Normal" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterOwner" MinHeight="300" MinWidth="500" MaxHeight="300" MaxWidth="500">
+        Title="EMACC: Регистрация" WindowState="Normal" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" MinHeight="300" MinWidth="500" MaxHeight="300" MaxWidth="500">
     <Window.Resources>
         <Style x:Key="MyWaterMarkStyle" TargetType="{x:Type TextBox}">
             <Setter Property="Template">

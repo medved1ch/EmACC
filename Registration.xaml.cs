@@ -102,7 +102,7 @@ namespace uchet
                         try
                         {
                             ConfirmCode = "1";
-                            ConfirmCode = RndStr(2);
+                            ConfirmCode = RndStr(6);
                             SmtpClient Smtp = new SmtpClient("smtp.mail.ru");
                             Smtp.UseDefaultCredentials = true;
                             Smtp.EnableSsl = true;

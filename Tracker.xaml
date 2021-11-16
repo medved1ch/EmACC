@@ -7,7 +7,7 @@
         xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2"
         x:Class="uchet.Tracker"
         mc:Ignorable="d"
-        Title="EMACC: Отследить" WindowState="Normal" WindowStartupLocation="CenterOwner" Height="450" Width="800" MinHeight="450" MinWidth="800">
+        Title="EMACC: Отследить" WindowState="Normal" WindowStartupLocation="CenterScreen" Height="450" Width="800" MinHeight="450" MinWidth="800">
     <Window.Resources>
         <Style x:Key="MyWaterMarkStyle" TargetType="{x:Type TextBox}">
             <Setter Property="Template">
