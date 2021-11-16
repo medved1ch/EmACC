@@ -136,14 +136,17 @@ namespace uchet
 
         private void DGAllEmp_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            EditEmpl editEmpl = new EditEmpl((DataRowView)DGAllEmp.SelectedItem);
-            editEmpl.Owner = this;
-            bool? result = editEmpl.ShowDialog();
-            switch (result)
+            if (DGAllEmp.SelectedIndex != -1)
             {
-                default:
-                    DisplayData();
-                    break;
+                EditEmpl editEmpl = new EditEmpl((DataRowView)DGAllEmp.SelectedItem);
+                editEmpl.Owner = this;
+                bool? result = editEmpl.ShowDialog();
+                switch (result)
+                {
+                    default:
+                        DisplayData();
+                        break;
+                }
             }
         }
         private void TbSearch_TextChanged(object sender, TextChangedEventArgs e)
