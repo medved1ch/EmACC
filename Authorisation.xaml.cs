@@ -86,7 +86,14 @@ namespace uchet
 
         private void BtnHelp_Click(object sender, RoutedEventArgs e)
         {
-            System.Diagnostics.Process.Start(@"C:\Users\medved1ch\Source\Repos\EmACC\EmACCHelper.chm");
+            try
+            {
+                System.Diagnostics.Process.Start(@"C:\Users\medved1ch\Source\Repos\EmACC\EmACCHelper.chm");
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.Message);
+            }
         }
     }
 }
