@@ -261,12 +261,17 @@
                 </Button.ToolTip>
             </Button>
             <TextBox x:Name="TbSearch" Style="{StaticResource MyWaterMarkStyle}" Tag="Поиск по фамилии" HorizontalAlignment="Left" Height="25" Margin="295,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" VerticalContentAlignment="Center" Grid.Row="1" TextChanged="TbSearch_TextChanged" />
-            <Button x:Name="BtnExp"  HorizontalAlignment="Left" Margin="435,16,0,0" VerticalAlignment="Top" Height="35" Width="34" Grid.Row="1" Click="BtnExp_Click">
+            <Button x:Name="BtnExp"  HorizontalAlignment="Left" Margin="435,16,0,0" VerticalAlignment="Top" Height="35" Width="35" Grid.Row="1" Click="BtnExp_Click">
                 <Image Source="img/excel.png" Width="30" HorizontalAlignment="Center" VerticalAlignment="Center" />
                 <Button.ToolTip>
                     <ToolTip>
                         Экспорт в Excel
                     </ToolTip>
+                </Button.ToolTip>
+            </Button>
+            <Button x:Name="BtnHelp" Content="Справка" HorizontalAlignment="Left" Margin="480,21,0,0" VerticalAlignment="Top" Height="25" Width="85" Grid.Row="1" FontWeight="Bold" FontSize="14" Click="BtnHelp_Click">
+                <Button.ToolTip>
+                    <ToolTip Content="Открыть справку о программе"/>
                 </Button.ToolTip>
             </Button>
         </Grid>

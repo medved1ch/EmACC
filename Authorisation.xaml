@@ -691,7 +691,11 @@
         <Button x:Name="BtnReg" Content="Регистрация" HorizontalAlignment="Left" Height="25" Margin="185,117,0,0" VerticalAlignment="Top" Width="115" FontWeight="Bold" FontSize="14" FontStyle="Italic" Click="BtnReg_Click"/>
         <Image HorizontalAlignment="Left" Height="34" Margin="234,7,0,0" VerticalAlignment="Top" Width="34" Source="logo.ico"/>
         <Label Content="Вход" HorizontalAlignment="Left" Margin="280,2,0,0" VerticalAlignment="Top" Height="42" Width="68" FontSize="22" FontWeight="Bold" FontStyle="Italic"/>
-
+        <Button x:Name="BtnHelp" Content="Справка" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="25" Width="65" FontWeight="Bold" FontSize="14" Click="BtnHelp_Click">
+            <Button.ToolTip>
+                <ToolTip Content="Открыть справку о программе"/>
+            </Button.ToolTip>
+        </Button>
     </Grid>
 </Window>
 
