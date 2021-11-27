@@ -7,6 +7,7 @@ using uchet.Connection;
 using System.Data;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Windows.Controls;
+using System.Reflection;
 
 namespace uchet
 {
@@ -188,7 +189,10 @@ namespace uchet
         {
             try
             {
-                System.Diagnostics.Process.Start(@"C:\Users\medved1ch\Source\Repos\EmACC\EmACCHelper.chm");
+                string path = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+                string relPath = @"EmACCHelper.chm";
+                string fullPath = System.IO.Path.Combine(path, relPath);
+                System.Diagnostics.Process.Start($@"{fullPath}");
             }
             catch (Exception exp)
             {

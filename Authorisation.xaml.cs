@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SQLite;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -88,7 +89,10 @@ namespace uchet
         {
             try
             {
-                System.Diagnostics.Process.Start(@"C:\Users\medved1ch\Source\Repos\EmACC\EmACCHelper.chm");
+                string path = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+                string relPath = @"EmACCHelper.chm";
+                string fullPath = System.IO.Path.Combine(path, relPath);
+                System.Diagnostics.Process.Start($@"{fullPath}");
             }
             catch (Exception exp)
             {
